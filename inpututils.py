@@ -1,6 +1,13 @@
 import re
 
+'''
+Provides static utility methods to retrive an validate user input.
+'''
 class InputUtils():
+    '''
+    Prompts user for text input and validates against a regex pattern.
+    Returns valid user input
+    '''
     @staticmethod
     def get_text_input(prompt, regex_pattern):
         while True:
@@ -16,6 +23,10 @@ class InputUtils():
             except Exception as e:
                 print(e)
 
+    '''
+    Prompts user for number input and validates against number range
+    Returns valid user input
+    '''
     @staticmethod
     def get_number_input(prompt, upper_bound):
         while True:
